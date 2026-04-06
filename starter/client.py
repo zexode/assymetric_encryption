@@ -3,21 +3,21 @@ import secrets
 import socket
 
 from dh_utils import derive_key_material, public_component, shared_secret, xor_bytes
-
+#TODO
 HOST = "127.0.0.1"
-PORT = 5000
+PORT = ????
 
-
+#TODO
 def json_write(w, obj: dict) -> None:
-    w.write(json.dumps(obj, ensure_ascii=False) + "\n")
+    w.write(json.????(obj, ensure_ascii=False) + "\n")
     w.flush()
 
-
+#TODO
 def json_read(r) -> dict:
     line = r.readline()
     if not line:
         raise EOFError("connection closed")
-    return json.loads(line.strip())
+    return json.????(line.strip())
 
 
 def is_valid_student_name(student_name: str) -> bool:
